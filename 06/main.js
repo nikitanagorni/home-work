@@ -1,5 +1,10 @@
 var array1 = [123, "string", true, {value: 321}, null],
     array2 = ["first", "second", "last"],
-    result = array1.concat(array2);
-
+    result = [];
+while (result < array1.length) {
+    result++
+    result += array1;
+    result += array2;
+}
 console.log("result: ", result);
+
