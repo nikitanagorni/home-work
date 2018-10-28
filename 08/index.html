@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>08</title>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        div {
+            display: flex;
+            height: 50px;
+            border-style: solid;
+        }
+        .block1{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+                        
+        }
+        .block2{
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-start;
+            
+                      
+        }
+        .block3{
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-end;
+            
+        }
+        .block4 {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-end;
+            
+        }
+        .span{
+            
+            margin-right: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="block1">
+        <span >001</span>
+        <span >002</span>
+        <span >003</span>
+        <span >004</span>
+        <span >005</span>
+        <span >006</span>
+    </div>
+
+    <div class="block2">
+        <span class="span" >001</span>
+        <span class="span">002</span>
+        <span class="span">003</span>
+        <span class="span">004</span>
+        <span class="span">005</span>
+        <span >006</span>
+    </div>
+
+    <div class="block3">
+        <span class="span" >001</span>
+        <span class="span">002</span>
+        <span class="span">003</span>
+        <span class="span">004</span>
+        <span class="span">005</span>
+        <span >006</span>
+    </div>
+
+    <div class="block4">
+        <span>001</span>
+        <span>002</span>
+        <span>003</span>
+        <span>004</span>
+        <span>005</span>
+        <span>006</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "08",
+  "version": "1.0.0",
+  "description": "Home work for G-FD1-05-18",
+  "scripts": {
+    "start": "browser-sync start -s -f ./"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3"
+  }
+}
