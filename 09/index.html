@@ -12,18 +12,36 @@
         <div class="sidebar">Sidebar</div>
         <div class="content">
             <div class="main-content">
-                    <input type="checkbox" class="checkbox" id="checkbox" />
-                    <label for="checkbox" id="Main_content" >Main content </label>
-                <div class="form">
-                    <div class="form-row">
-                        <label for="username">User name:</label>
-                        <input id="email"
-                               placeholder="Enter username">
-                    </div>
-                    <div class="form-row">
-                        <label for="email">Email:</label>
-                        <input id="username"
-                               placeholder="Enter email">
+                <div class="main-content" id="Main_content">Main content
+                    <div class="form">
+                        
+                        <div class="form-row">
+                            <label for="username"> Name:</label>
+                            <input id="username"
+                               placeholder="Enter username"
+                               type="text">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="email">Email:</label>
+                            <input id="email"
+                               placeholder="Enter email"
+                               type="email">
+                         </div>
+
+                         <div class="form-row">
+                            <label for="password">Password:</label>
+                            <input id="password"
+                               placeholder="Enter password"
+                               type="password">   
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
+                            <label for="subscribeNews">to keep the password?</label>
+                        </div>
+                        <div>
+                            <button class="button" type="submit">Enter</button>
+                        </div>
                     </div>
                 </div>
             </div>
