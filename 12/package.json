@@ -1,0 +1,14 @@
+{
+  "name": "12",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "browser-sync start -s -f ./"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1"
+  }
+}

@@ -1,0 +1,48 @@
+html, body, .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #a68a8a;
+}
+
+.footer {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #f68f8f;
+}
+
+.main {
+    height: calc(100% - 200px);
+    width: 100%;
+    
+    
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #62dbca;
+}
+
+.col-9 {
+  padding-right: 0px;
+  padding-left: 0px;  
+}
+
