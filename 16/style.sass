@@ -1,0 +1,42 @@
+$color1 = #ebe1d9
+$color2 = #ad8667
+
+*
+	margin: 0
+	padding: 0
+
+a
+	color: $color1
+	text-decoration: underline
+	
+	&:hover 
+		text-decoration: none   
+
+body
+	font-size: 12pt
+	line-height: 1.75em
+	background: $color1
+	color: $color2 
+	
+@mixin fond($margin)
+	margin: $margin
+
+img.left
+	float: left
+	@include fond(5px 20px 20px 0)
+	
+img.top
+	@include fond(5px 0px 20px 0)
+
+@mixin fond($color)
+	margin: $color    
+	
+#main
+	position: relative
+	padding: 0
+	@include fond(#5e5e5e)
+	 
+	 a
+	 	@include fond(#5e5e5e)
+	 ul
+	 	list-style: none 
