@@ -7,6 +7,7 @@ result = prioritySort(data, ['number', 'null', 'string', 'object', 'undefined', 
 console.log('result', result);
 
 function prioritySort(array, dataPriority) {
+    
 
     var result = [];
 
@@ -14,42 +15,41 @@ function prioritySort(array, dataPriority) {
         
         var a = dataPriority[i];
 
-        var uniteResult = [];
+        var midResult = [];
 
         switch (a) {
         
+        case 'number':
+            midResult = typeArr('number', array);
+            
+            for(var j = 0; j < midResult.length; j++){
+                result.push(midResult[j]);
+            }
+            
+            break;
+
         case 'null':
             result.push(null);
             break;
-
-
-        case 'number':
-            uniteResult = typeArr('number', array);
+        
+        case 'string':
+            midResult = typeArr('string', array);
             
-            for(var e = 0; e < uniteResult.length; e++){
-                result.push(uniteResult[e]);
+            midResult.sort();
+            
+            for(j = 0; j < midResult.length; j++) {
+                result.push(midResult[j]);
             }
             
             break;
             
         case 'object':
-            uniteResult = typeArr('object', array);
+            midResult = typeArr('object', array);
             
-            for(e = 0; e < uniteResult.length; e++){
-                if(uniteResult[e] !== null) {
-                    result.push(uniteResult[e]);
+            for(j = 0; j < midResult.length; j++){
+                if(midResult[j] !== null) {
+                    result.push(midResult[j]);
                 }
-            }
-            
-            break;
-
-            case 'string':
-            uniteResult = typeArr('string', array);
-            
-            uniteResult.sort();
-            
-            for(e = 0; e < uniteResult.length; e++) {
-                result.push(uniteResult[e]);
             }
             
             break;
@@ -59,37 +59,37 @@ function prioritySort(array, dataPriority) {
             break;
           
         case 'boolean':
-            uniteResult = typeArr('boolean', array);
+            midResult = typeArr('boolean', array);
             
             function compareNumeric(a, b) {
                 if (a > b) return -1;
                 if (a < b) return 1;
             }
 
-            uniteResult.sort(compareNumeric);
+            midResult.sort(compareNumeric);
 
-            for(e = 0; e < uniteResult.length; e++) {
-                result.push(uniteResult[e]);
+            for(j = 0; j < midResult.length; j++) {
+                result.push(midResult[j]);
             }
 
             break;
         }   
     }    
 
-function typeArr(unite, end) {
+    function typeArr(type, arr) {
       
-    var result = [];
+        var result = [];
       
-    for(var i = 0; i < end.length; i++) {
+        for(var i = 0; i < arr.length; i++) {
           
-        if(typeof end[i] === unite) {
-                result.push(end[i]);
+            if(typeof arr[i] === type) {
+                result.push(arr[i]);
+          }
         }
-    }
         
-    return result;
-}
+        return result;
+    }
 
-return result;
+    return result;
 
 }
